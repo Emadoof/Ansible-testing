@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Changing the hostname
+      hostname:
+        name: "Client-{{ inventory_hostname }}"

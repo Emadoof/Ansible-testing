@@ -1,0 +1,10 @@
+---
+
+- hosts: all 
+  become: true
+  tasks: 
+
+  - name: Ensure apache is at the latest version
+    apt:
+      name: apache2
+      state: absent
